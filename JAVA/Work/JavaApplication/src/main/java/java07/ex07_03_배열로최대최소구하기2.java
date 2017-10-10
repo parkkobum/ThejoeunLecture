@@ -1,27 +1,49 @@
 package java07;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class ex07_03_배열로최대최소구하기2 {
     public static void main(String[] args) {
-        int sum = 0;
-        double avg = 0.0;
         
         Scanner keyboard = new Scanner(System.in);
-        System.out.print("학생수를 입력하시오");
-        int studentNum = keyboard.nextInt();
+        System.out.print("INPUT:");
         
-        int[] studentScore = new int[studentNum];
+        String input = keyboard.next();
+        String[] inputArray = input.split(",");
+        int[] studentScore = new int[inputArray.length];
         
-        for (int i = 0; i < studentNum; i++) {
-            System.out.print("성적을 입력하시오:");
-            studentScore[i] = keyboard.nextInt();
-            sum = sum + studentScore[i];
+        for (int i = 0; i < inputArray.length; i++) {
+            studentScore[i] = Integer.valueOf(inputArray[i]);
         }
         
-        System.out.println("합계는:" + sum);
-        System.out.println("평균은:" + sum / studentNum);
+        System.out.print("배열 정렬 전:");
+        printArray(studentScore);
+        
+        Arrays.sort(studentScore); // 배열 정렬 메서드.
+        
+        System.out.print("배열 정렬 후:");
+        printArray(studentScore);
+        
+        System.out.println("최소값 : " + studentScore[0]);
+        System.out.println("최대값 : " + studentScore[inputArray.length - 1]);
         
     }
     
+    public static void printArray(int[] studentScore) {
+        
+        if (beforeAfter == 0) {
+        } else {
+            System.out.print("배열 정렬 후:");
+            
+        }
+        for (int i = 0; i < studentScore.length; i++) {
+            if (i == studentScore.length - 1) {
+                System.out.println(studentScore[studentScore.length - 1]);
+            } else {
+                System.out.print(studentScore[i] + ",");
+            }
+        }
+        
+    }
 }
