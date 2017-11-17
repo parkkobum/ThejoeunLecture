@@ -8,7 +8,9 @@ public abstract class Shape {
 
     public abstract Shape getShape();
 
-    public abstract void draw();
+    public void draw() {
+        System.out.println("Shape Draw()");
+    }
     
     public String getColor() {
         return color;

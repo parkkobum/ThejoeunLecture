@@ -36,6 +36,14 @@ public class CompatDisc extends Product {
         this.가수이름 = 가수이름;
     }
     
+    public void print(int i) {
+        System.out.println("상품ID>>" + i);
+        System.out.println("상품 설명>>" + this.get상품설명());
+        System.out.println("생산자>>" + this.get생산자());
+        System.out.println("가격>>" + this.get가격());
+        System.out.println("앨범 제목>>" + this.get앨범제목());
+        System.out.println("가수>>" + this.get가수이름());
+    }
     
     
 }

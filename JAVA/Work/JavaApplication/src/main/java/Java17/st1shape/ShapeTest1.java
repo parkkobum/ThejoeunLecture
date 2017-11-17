@@ -13,6 +13,9 @@ public class ShapeTest1 {
         Triangle t = new Triangle();
         t.draw();
         
+        Shape s = new Rectangle();
+        s.draw();
+        
     }
     
 }
